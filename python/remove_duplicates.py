@@ -1,4 +1,4 @@
-#remove duplicates from sorted array
+#leetcode problem : remove duplicates from sorted array
 
 class Solution(object):
     def removeDuplicates(self, nums):
@@ -12,3 +12,7 @@ class Solution(object):
         
         return j+1
         
+#testing the class
+nums = [1, 3, 3, 4, 5, 5, 6, 7, 8, 8]
+result = Solution().removeDuplicates(nums)
+print(result)
