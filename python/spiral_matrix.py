@@ -1,6 +1,5 @@
 class Solution(object):
     def spiralOrder(self, matrix):
-        
         if not matrix:
             return []
         
@@ -8,38 +7,38 @@ class Solution(object):
         n = len(matrix)
         m = len(matrix[0])
         
-        # 4 directions of the matrix
         top = 0
         left = 0
         right = m - 1
         bottom = n - 1
 
-        while len(result) < n * m:
+        while top <= bottom and left <= right:
+            # Traverse right
             for col in range(left, right + 1):
-                if len(result) < n * m:
-                    result.append(matrix[top][col])
-            for row in range(top + 1, bottom):
-                if len(result) < n * m:
-                    result.append(matrix[row][right])
-            for col in range(right, left - 1, -1):
-                if len(result) < n * m:
-                    result.append(matrix[bottom][col])
-            for row in range(bottom - 1, top, -1):
-                if len(result) < n * m:
-                    result.append(matrix[row][left])
-            
+                result.append(matrix[top][col])
             top += 1
-            left += 1
+            
+            # Traverse down
+            for row in range(top, bottom + 1):
+                result.append(matrix[row][right])
             right -= 1
-            bottom -= 1
-
-
-
-
-
-
-
-
-
-
+            
+            # Traverse left (if there are rows left)
+            if top <= bottom:
+                for col in range(right, left - 1, -1):
+                    result.append(matrix[bottom][col])
+                bottom -= 1
+            
+            # Traverse up (if there are columns left)
+            if left <= right:
+                for row in range(bottom, top - 1, -1):
+                    result.append(matrix[row][left])
+                left += 1
         
+        return result
+    
+    
+    
+    
+    
+    
