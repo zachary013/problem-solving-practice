@@ -7,6 +7,7 @@ class Solution(object):
         n = len(matrix)
         m = len(matrix[0])
         
+        # 4 dimensions of the matrix  
         top = 0
         left = 0
         right = m - 1
