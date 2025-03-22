@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class SerieLoop{
     public static void main(String []argh){
