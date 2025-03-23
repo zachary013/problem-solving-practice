@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class contains_duplicate_2 {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
@@ -20,6 +20,4 @@ class Solution {
         return false;
 
     }
-} {
-
 }
