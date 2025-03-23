@@ -10,5 +10,3 @@ class Solution(object):
             curSum += n
             maxSub = max(maxSub, curSum)
         return maxSub
-
-        
